@@ -16,8 +16,22 @@ export class CharactersController {
     // NOTE the controller can access application data and use it to update the View
     const characters = AppState.characters
     let characterHTML = ''
-    characters.forEach(character => characterHTML += character.title)
-    const namesElem = document.getElementById('names')
-    namesElem.innerText = characterHTML
+    characters.forEach(character => {
+      characterHTML += `
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-title text-center fs-1">${character.title}</p>
+            <div class="text-center fs-3">
+              <button>-</button>
+              <span>100</span>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+      </div>`
+    })
+    const characterCardsElem = document.getElementById('character-cards')
+    characterCardsElem.innerHTML = characterHTML
   }
 }

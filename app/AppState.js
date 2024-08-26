@@ -1,6 +1,6 @@
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
-// REVIEW never handwrite your own imports
+// REVIEW never handwrite your own imports, let your intellisense handle these for you
 import { Character } from './models/Character.js'
 
 
@@ -23,7 +23,9 @@ class ObservableAppState extends EventEmitter {
     //   class: 'Rogue'
     // }
     new Character('Mick the Mighty', 'Wizard'),
-    new Character('Jake the Snake', 'Rogue')
+    new Character('Jake the Snake', 'Rogue'),
+    new Character('Jeremy the stinky', 'Garbage Man'),
+    new Character('Ryan the Brit', 'Warrior'),
   ]
 
 }
