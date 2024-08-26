@@ -13,10 +13,10 @@ export class CharactersController {
   }
 
   drawCharacters() {
+    // NOTE the controller can access application data and use it to update the View
     const characters = AppState.characters
     let characterHTML = ''
     characters.forEach(character => characterHTML += character.title)
-    console.log(characterHTML);
     const namesElem = document.getElementById('names')
     namesElem.innerText = characterHTML
   }
