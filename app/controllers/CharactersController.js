@@ -21,6 +21,11 @@ export class CharactersController {
     this.drawCharacters()
   }
 
+  decreaseHealth(characterName) {
+    charactersService.decreaseHealth(characterName)
+    this.drawCharacters()
+  }
+
   drawCharacters() {
     // NOTE the controller can access application data and use it to update the View
     const characters = AppState.characters

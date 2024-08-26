@@ -1,6 +1,10 @@
 import { AppState } from "../AppState.js";
 
 class CharactersService {
+  decreaseHealth(characterName) {
+    const foundCharacter = AppState.characters.find(character => character.name == characterName)
+    foundCharacter.health--
+  }
   increaseHealth(characterName) {
     console.log(`increasing health for ${characterName}`);
     const foundCharacter = AppState.characters.find(character => character.name == characterName)
